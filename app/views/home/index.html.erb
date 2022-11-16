@@ -1,0 +1,29 @@
+
+<div style="background-color:Green;">
+<center>
+<h1 class="container ">Home</h1>
+<%= link_to "Log in", new_session_path(:user) %><br />
+<p>Welcome </p>
+</center>
+</div>
+
+<li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+    <div class="dropdown-menu" aria-labelledby="karlDropdown">
+    <a class="dropdown-item" href="index.home">Home</a>
+    <a class="dropdown-item" href="shop.html">Shop</a>
+    <a class="dropdown-item" href="index.products">Product Details</a>
+    <a class="dropdown-item" href="cart.html">Cart</a>
+    <a class="dropdown-item" href="checkout.html">Checkout</a>
+    </div>
+</li>
+
+
+
+
+<div>
+<a style="background-color:DodgerBlue;">
+<%= link_to 'See Products', { controller: 'products', action: 'index'} %>   
+</a>
+</div>
+

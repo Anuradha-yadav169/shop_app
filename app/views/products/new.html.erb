@@ -1,0 +1,31 @@
+
+<%= form_with model: @product do |form| %>
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </div>
+  
+    <div>
+      <%= form.label :image %><br>
+      <%= form.file_field :images, multiple: true %>
+    </div>
+
+    <div>
+    <% if @product.images.attached? %>
+    
+    
+    <%= image_tag @product.images.varient(:thumb) %>
+    <% end %>
+    </div>
+
+    <div>
+    <%= form.label :cart_id %>
+    <%= form.text_field :cart_id %>
+    </div>
+
+    
+    
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>

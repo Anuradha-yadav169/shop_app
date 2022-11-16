@@ -1,0 +1,17 @@
+<h1>Products show</h1>
+<p>Find me in app/views/products/show.html.erb</p>
+
+
+
+ <li> <%= @product.name %></li>
+ <li> <%=  @product.price %></li>
+ <li> <%=  @product.quantity %></li>
+  <li><%= @product.cart_id %></li>
+ <li>
+  <% if @product.images.attached? %>
+  <p>
+ <%= image_tag @product.images.varient(:thumb) %>
+  <%= image_tag(@product.image) %>
+  </p>
+  </li>
+  <% end %>
