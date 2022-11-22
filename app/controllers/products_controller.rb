@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
+  # def index
+  #   @products = Product.all.with_attached_images
+  # end
   def index
-    @products = Product.all.with_attached_images
+    @products = Product.all
   end
 
   def show
@@ -21,11 +24,23 @@ class ProductsController < ApplicationController
     end
   end
 
-  def delete
+  def edit
+    @product = Product.find(params[:id]) 
   end
+    
+  def update   
+    @product = Product.find(params[:id])   
+    if @product.update(product_params)   
+      flash[:notice] = 'Product updated!'   
+      redirect_to root_path   
+    else   
+      flash[:error] = 'Failed to edit product!'   
+      render :edit   
+    end   
+  end 
 
   private
   def product_params
-    params.require(:product).permit(:name, :quantity, :price, :cart_id, images: [])
+    params.require(:product).permit(:name, :description, :price, images: [])
   end
 end

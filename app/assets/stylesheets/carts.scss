@@ -1,3 +1,75 @@
 // Place all the styles related to the carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.cart-page-heading {
+    margin-bottom: 50px;
+}
+.cart-total-chart {
+    background-color: #f4f2f8;
+    padding: 30px;
+}
+.karl-checkout-btn {
+    width: 100%;
+    height: 60px;
+    background-color: #ff084e;
+    border-radius: 0;
+    color: rgb(84, 25, 25);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 60px;
+    padding: 0;
+}
+.btn:not([disabled]):not(.disabled) {
+    cursor: pointer;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-lg-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+.col-md-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.mt-70 {
+    margin-top: 70px;
+}
+.cart-page-heading {
+    margin-bottom: 50px;
+}
+.custom-control {
+    position: relative;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.justify-content-between {
+    -webkit-box-pack: justify!important;
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+.d-flex{
+    display: flex!important;
+}

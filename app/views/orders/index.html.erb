@@ -1,0 +1,18 @@
+<center>
+<h2>All Orders</h2>
+<div class="card" style="width: 18rem;">
+<% @orders.each do |order| %>
+  <div class="card-body">
+    <h5 class="card-title">Name: <%= order.name %></h5>
+    <p class="card-text">Email: <%= order.email %></p>
+    <p class="card-text">Line Items: </p>
+    <ul>
+    <% order.line_items.each do |item| %>
+    <li><p class="card-text"><%= item.quantity %> x <%= item.product.name %>
+    <% end %>
+    </ul>
+    <%= button_to "Back to Home Page", root_path, class: "btn btn-primary"%>
+  </div>
+<% end %>
+</div>
+</center>

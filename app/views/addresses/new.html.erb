@@ -1,0 +1,61 @@
+<div class="container">   
+  <%= form_for @address, url: {action: :create} do |f| %>   
+     <div class="cart-page-heading">
+     <h5>Billing Address</h5>
+     <p>Enter your cupone code</p>
+     </div>
+      <div class="row">  
+      <div>   
+        <p>     
+        <div class="col-md-6 mb-3">   
+            <label>First Name</label>   
+              <%= f.text_field :first_name, class: "form-control"%>   
+        </div>
+        <div class="col-md-6 mb-3">   
+             <label>Last Name</label>   
+             <%= f.text_field :last_name, class: "form-control" %>   
+        </div>   
+  
+        <div class="col-md-6 mb-3">   
+           <label>City</label>   
+              <%= f.text_field :city, class: "form-control" %>   
+        </div>  
+        <div class="col-md-6 mb-3">   
+           <label>Country</label>   
+              <%= f.text_field :country, class: "form-control" %>   
+        </div>
+        <div class="col-md-6 mb-3">   
+           <label>Code</label>   
+              <%= f.text_field :postal_code, class: "form-control" %>   
+        </div> 
+        <div class="col-md-6 mb-3">   
+           <label>Phone</label>   
+              <%= f.text_field :phone, class: "form-control" %>   
+        </div>
+        <div class="col-md-6 mb-3">   
+           <label>Email</label>   
+            <%= f.text_field :email, class: "form-control" %>   
+        </div>
+         </p>   
+      </div>   
+      <div>   
+        <%= link_to 'Back', { controller: 'addresses', action: 'index'} %>   
+        <%= f.submit 'Create Address' %>   
+      </div> 
+    </div>  
+  <% end %>   
+</div>  
+   <div class="col-12">
+      <div class="custom-control custom-checkbox d-block mb-2">
+         <input type="checkbox" class="custom-control-input" id="customCheck1">
+         <label class="custom-control-label" for="customCheck1">Terms and conitions</label>
+      </div>
+      <div class="custom-control custom-checkbox d-block mb-2">
+         <input type="checkbox" class="custom-control-input" id="customCheck2">
+         <label class="custom-control-label" for="customCheck2">Create an accout</label>
+      </div>
+      <div class="custom-control custom-checkbox d-block">
+         <input type="checkbox" class="custom-control-input" id="customCheck3">
+        <label class="custom-control-label" for="customCheck3">Subscribe to our newsletter</label>
+      </div>
+   </div>

@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .container {
-    background-color: aqua;
+    background-color: FFA07;
+}
+
+.top-discount-area .single-discount-area {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding: 40px 15px;
+    background-color: #b8b8b8;
+    text-align: center;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
+.top-discount-area .single-discount-area:nth-child(2) {
+    background-color: #ff084e;
 }
 
