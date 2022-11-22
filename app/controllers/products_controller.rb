@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :set_categories
   # def index
   #   @products = Product.all.with_attached_images
   # end
@@ -41,6 +42,10 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name, :description, :price, images: [])
+    params.require(:product).permit(:name, :description, :price, :category_id, images: [])
+  end
+
+  def set_categories
+    @categories = Category.all.order(:name)
   end
 end
